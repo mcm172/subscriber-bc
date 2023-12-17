@@ -27,16 +27,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class CreateSubscriberControllerTest extends SubscriberControllerTest{
-
-
-    private static final String jsonPayload = "{" +
-            "  \"subscriberId\": \"123\"," +
-            "  \"firstName\": \"firstanme\"," +
-            "  \"lastName\": \"string\"," +
-            "  \"mail\": \"mail@mail.com\"," +
-            "  \"phoneNumber\": \"0606060606\"," +
-            "  \"isActive\": true" +
-            "}";
     @Autowired
     private MockMvc mockMvc;
 

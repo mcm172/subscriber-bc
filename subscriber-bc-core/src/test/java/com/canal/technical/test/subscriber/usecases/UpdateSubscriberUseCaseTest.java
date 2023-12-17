@@ -3,12 +3,10 @@ package com.canal.technical.test.subscriber.usecases;
 import com.canal.technical.test.subscriber.domain.errors.SubscriberDatabaseException;
 import com.canal.technical.test.subscriber.domain.errors.SubscriberNotFoundException;
 import com.canal.technical.test.subscriber.domain.ports.UpdateSubscriberService;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 class UpdateSubscriberUseCaseTest {
@@ -25,10 +23,6 @@ class UpdateSubscriberUseCaseTest {
     void setUp() {
         updateSubscriberService = mock(UpdateSubscriberService.class);
         useCaseToTest = new UpdateSubscriberUseCase(updateSubscriberService);
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test

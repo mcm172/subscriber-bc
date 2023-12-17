@@ -3,7 +3,6 @@ package com.canal.technical.test.subscriber.usecases;
 import com.canal.technical.test.subscriber.domain.entity.Subscriber;
 import com.canal.technical.test.subscriber.domain.errors.SubscriberNotFoundException;
 import com.canal.technical.test.subscriber.domain.ports.SearchSubscriberService;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,10 +21,6 @@ class GetSubscriberUseCaseTest {
     void setUp() {
         searchSubscriberService = mock(SearchSubscriberService.class);
         useCaseToTest = new GetSubscriberUseCase(searchSubscriberService);
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test

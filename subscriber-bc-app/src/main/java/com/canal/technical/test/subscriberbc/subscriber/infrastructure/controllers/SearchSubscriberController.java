@@ -24,7 +24,7 @@ public class SearchSubscriberController {
 
     @GetMapping(value ="/{subscriber-id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SubscriberPayload> getBySubscriberId(@PathVariable("subscriber-id") String subscriberId){
-        Subscriber subscriber = null;
+        Subscriber subscriber;
         try {
             subscriber = new GetSubscriberUseCase(searchSubscriberService).execute(subscriberId);
         } catch (SubscriberNotFoundException ex) {
@@ -38,7 +38,7 @@ public class SearchSubscriberController {
         if(firstName == null && lastName == null && mail == null && phoneNumber == null){
             throw new SubscriberBadRequestErrorResponse(null, "subscriber.search.all.params.null", null);
         }
-        Subscriber subscriber = null;
+        Subscriber subscriber;
         try {
             subscriber = new FindSubscriberUseCase(searchSubscriberService).execute(firstName,lastName ,mail, phoneNumber);
         } catch (SubscriberNotFoundException ex) {

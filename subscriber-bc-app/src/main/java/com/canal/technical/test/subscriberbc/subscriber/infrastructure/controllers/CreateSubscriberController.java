@@ -28,7 +28,7 @@ public class CreateSubscriberController {
 
     @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> addNewSubscriber(@Valid @RequestBody SubscriberPayload subscriber) throws URISyntaxException {
-        String subscriberId = null;
+        String subscriberId;
         try{
             subscriberId = new CreateSubscriberUseCase(createSubscriberService).execute(subscriber.subscriberId(),subscriber.firstName(), subscriber.lastName(), subscriber.mail(), subscriber.phoneNumber());
         } catch (SubscriberAlreadyExistsException ex) {

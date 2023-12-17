@@ -4,7 +4,6 @@ import com.canal.technical.test.subscriber.domain.entity.Subscriber;
 import com.canal.technical.test.subscriber.domain.errors.SubscriberDatabaseException;
 import com.canal.technical.test.subscriber.domain.errors.SubscriberAlreadyExistsException;
 import com.canal.technical.test.subscriber.domain.ports.CreateSubscriberService;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,10 +22,6 @@ class CreateSubscriberUseCaseTest {
     void setUp() {
         createSubscriberService = mock(CreateSubscriberService.class);
         useCaseToTest = new CreateSubscriberUseCase(createSubscriberService);
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test
