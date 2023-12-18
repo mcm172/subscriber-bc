@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
 public class DbUpdateSubscriberService implements UpdateSubscriberService {
 
     private final SubscriberModelRepository subscriberRepository;
