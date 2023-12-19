@@ -1,6 +1,6 @@
 package com.canal.technical.test.subscriberbc.subscriber.infrastructure.controllers;
 
-import com.canal.technical.test.subscriberbc.subscriber.infrastructure.controllers.SubscriberPayload;
+import com.canal.technical.test.subscriberbc.subscriber.infrastructure.controllers.payload.SubscriberPayload;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

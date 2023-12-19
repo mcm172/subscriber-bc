@@ -1,4 +1,4 @@
-package com.canal.technical.test.subscriberbc.subscriber.infrastructure.controllers;
+package com.canal.technical.test.subscriberbc.subscriber.infrastructure.controllers.payload;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
